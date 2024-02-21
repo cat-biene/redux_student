@@ -1,0 +1,6 @@
+.student{
+    padding: 10px;
+    border: 2px solid black;
+    display: flex;
+    gap: 20px;
+}
