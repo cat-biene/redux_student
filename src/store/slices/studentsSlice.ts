@@ -4,7 +4,7 @@ import { Student } from "../../types/Student";
 export const loadStudents = createAsyncThunk( 
     "students/loadStudents",
     async () => {
-        const resp = await fetch ("http://127.0.0.1:5500/students.json");
+        const resp = await fetch ("http://127.0.0.1:5501/students.json");
         const data = await resp.json();
         return data;
     }
