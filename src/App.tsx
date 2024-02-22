@@ -2,17 +2,18 @@ import { useDispatch } from "react-redux";
 import StudentsList from "./components/StudentsList/StudentsList";
 import { loadStudents } from "./store/slices/studentsSlice";
 import { RootDispatch } from "./store/store";
-import Test from "./components/Test";
+import { useEffect } from "react";
 
 function App() {
 
   const dispatch = useDispatch<RootDispatch>();
+  useEffect(() => {
+    dispatch(loadStudents())
+  }, [dispatch]);
 
   return (
     <div>
-      <Test/>
-      <button onClick={() => dispatch(loadStudents())}>download!</button>
-      <StudentsList/>
+      <StudentsList />
     </div>
   );
 }
